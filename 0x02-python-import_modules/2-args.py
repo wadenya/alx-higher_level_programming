@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
 import sys
 cnt = len(sys.argv) - 1
 if cnt == 0:
