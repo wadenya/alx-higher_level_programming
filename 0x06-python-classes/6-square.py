@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+
 """class Square Definition"""
+
 
 class Square:
     """Represents a square"""
+
     def __init__(self, size=0, position=(0, 0)):
         """initializes the square
         Arguments: size (int): size of a side of the square
@@ -20,11 +23,9 @@ class Square:
         """set of size square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        else:
-            if value < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = value
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
     @property
     def position(self):
         """Get position of the square"""
@@ -47,6 +48,7 @@ class Square:
         if self.__size == 0:
             print("")
             return
+
         [print("") for i in range(0,self.__position[1])]
         for i in range(0, self.__size):
             [print(" ", end="") for j in range(0, self.__position[0])]

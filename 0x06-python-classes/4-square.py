@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
 """class Square Definition"""
+
+
 class Square:
     """Represents a square
     Attributes:__size (int): size of a side of the square"""
