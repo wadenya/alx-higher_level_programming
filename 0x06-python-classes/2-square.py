@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-""" class Square defination"""
+""" defines a square """
+
+
 class Square:
-     """ square with a private instance attribute size """
+    """ square with private instance attribute size """
+
     def __init__(self, size=0):
-        """Arguments:
-            size: size of square"""
+        """
+        Args:
+            size: size of square
+        """
+
         if type(size) is int:
             if size < 0:
                 raise ValueError('size must be >= 0')
