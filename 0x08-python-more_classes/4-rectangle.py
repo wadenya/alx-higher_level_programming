@@ -6,7 +6,8 @@ class Rectangle:
         """returns a new Rectangle instance with width == height == size"""
         self.width = width
         self.height = height
-    @poperty
+
+    @property
     def width(self):
         """getter of rectangle width"""
         return self.__width

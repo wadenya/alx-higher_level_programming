@@ -11,7 +11,7 @@ class Rectangle:
         """instance of Rectangle is deleted"""
         print("Bye rectangle...")
 
-    @poperty
+    @property
     def width(self):
         """getter of rectangle width"""
         return self.__width

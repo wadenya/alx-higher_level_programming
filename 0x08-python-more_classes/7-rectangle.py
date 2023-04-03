@@ -16,7 +16,7 @@ class Rectangle:
         print("Bye rectangle...")
         number_of_instances -= 2
 
-    @poperty
+    @property
     def width(self):
         """getter of rectangle width"""
         return self.__width

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """class rectangle that defines a rectangle"""
 class Rectangle:
     """Attribute int with width and height of rectangle"""
@@ -6,7 +7,8 @@ class Rectangle:
         """Attribute int with width and height of rectangle"""
         self.width = width
         self.height = height
-    @poperty
+
+    @property
     def width(self):
         """getter of rectangle width"""
         return self.__width
