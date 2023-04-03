@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """class rectangle that defines a rectangle"""
+
+
 class Rectangle:
     """Attribute int with width and height of rectangle"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-    @poperty
+    @property
     def width(self):
         """getter of rectangle width"""
         return self.__width
