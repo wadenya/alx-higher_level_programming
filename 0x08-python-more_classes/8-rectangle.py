@@ -6,20 +6,30 @@ class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
 
 class Rectangle:
     """Rectangle information: width, height"""
-
     number_of_instances = 0
     print_symbol = "#"
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """biggest rectangle based on the area"""
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
 
     def __init__(self, width=0, height=0):
 
         self.height = height
         self.width = width
-         Rectangle.number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """prints a message when an instance is deleted"""
         print("Bye rectangle...")
-         Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
