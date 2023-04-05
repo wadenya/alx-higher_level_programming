@@ -1,34 +1,38 @@
 #!/usr/bin/python3
+"""
+class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
+"""
 
-"""class rectangle that defines a rectangle"""
+
 class Rectangle:
-    """Attribute int with width and height of rectangle"""
+    """Rectangle information: width, height"""
     def __init__(self, width=0, height=0):
-        """Attribute int with width and height of rectangle"""
-        self.width = width
+
         self.height = height
+        self.width = width
 
     @property
     def width(self):
-        """getter of rectangle width"""
+        """private instance attribute width (getter)"""
         return self.__width
+
     @width.setter
     def width(self, value):
-        """setter of rectangle width"""
+        """private instance attribute width (setter)"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @poperty
+    @property
     def height(self):
-        """getter of rectangle height"""
+        """private instance attribute height (getter)"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter of rectangle height"""
+        """private instance attribute height (setter)"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -36,11 +40,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Area of rectangle"""
+        """area of the rectangle"""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Perimeter of rectangle"""
-        if __width == 0 or __height == 0:
+        """returns the perimeter of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
             return 0
         return ((self.__width * 2) + (self.__height * 2))
