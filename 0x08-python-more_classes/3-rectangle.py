@@ -57,4 +57,4 @@ class Rectangle:
 
             Emtpystring += "\n".join("#" * self.__width for i in 
                     range(self.__height))
-        return string
+        return Emptystring
