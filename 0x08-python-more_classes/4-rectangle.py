@@ -53,11 +53,13 @@ class Rectangle:
         """print rectangle with character #"""
         Emptystring = ""
         if self.__width != 0 and self.__height != 0:
-            Emtpystring += "\n".join(i"#" * self.__width for i 
-                    in range(self.__height))
+            Emtpystring += "\n".join("#" * self.__width for i in 
+                    range(self.__height))
         return Emptystring
 
     def __repr__(self):
-        """return a string representation of the rectangle to be able 
-        to recreate a new instance by using eval()"""
+        """
+        return a string representation of the rectangle to 
+        be able to recreate a new instance by using eval()
+        """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
