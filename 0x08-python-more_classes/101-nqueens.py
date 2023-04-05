@@ -1,60 +1,61 @@
 #!/usr/bin/python3
 """
- N queens puzzle is the challenge of placing N 
- non-attacking queens on an N×N chessboard
+N queens puzzle is the challenge of placing N 
+non-attacking queens on an N×N chessboard
 """
 
 
 from sys import argv
 
 if __name__ == "__main__":
-    so = []
+    a = []
     if len(argv) != 2:
         print("Usage: nqueens N")
         exit(1)
     if argv[1].isdigit() is False:
         print("N must be a number")
         exit(1)
-    no = int(argv[1])
-    if no < 4:
+    n = int(argv[1])
+    if n < 4:
         print("N must be at least 4")
         exit(1)
 
+    # initialize the answer list
     for i in range(n):
-        so.append([i, None])
+        a.append([i, None])
 
-    def already_exists(hp):
-        """check that queen does not exist"""
-        for y in range(n):
-            if hp == so[y][1]:
+    def already_exists(y):
+        """check queen does not already exist in y"""
+        for x in range(n):
+            if y == a[x][1]:
                 return True
         return False
 
-    def reject(y, hp):
-
-        if (already_exists(hp)):
+    def reject(x, y):
+        """determines whether or not to reject the solution"""
+        if (already_exists(y)):
             return False
         i = 0
-        while(i < y):
-            if abs(so[i][1] - hp) == abs(i - y):
+        while(i < x):
+            if abs(a[i][1] - y) == abs(i - x):
                 return False
             i += 1
         return True
 
-    def clear_a(y):
-        """clears answers from the point of failure"""
-        for i in range(y, n):
-            so[i][1] = None
+    def clear_a(x):
+        """clears the answers from the point of failure on"""
+        for i in range(x, n):
+            a[i][1] = None
 
-    def nqueens(y):
-        """recursive backtracking function to find solution"""
-        for hp in range(n):
-            clear_so(x)
-            if reject(y, hp):
-                a[y][1] = hp
-                if (y == n - 1):
-                    print(so)
+    def nqueens(x):
+        """recursive backtracking function to find the solution"""
+        for y in range(n):
+            clear_a(x)
+            if reject(x, y):
+                a[x][1] = y
+                if (x == n - 1):
+                    print(a)
                 else:
-                    nqueens(y + 1)
+                    nqueens(x + 1)
 
     nqueens(0)
