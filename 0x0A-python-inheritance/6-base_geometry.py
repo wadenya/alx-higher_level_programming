@@ -3,8 +3,9 @@
 class BaseGeometry
 """
 
+
 class BaseGeometry:
-    """public area attribute"""
+    """public attribute area"""
     def area(self):
-        """Exeption error raised"""
+        """exception error raised"""
         raise Exception("area() is not implemented")

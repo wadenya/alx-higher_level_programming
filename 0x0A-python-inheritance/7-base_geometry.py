@@ -3,14 +3,16 @@
 class BaseGeometry
 """
 
+
 class BaseGeometry:
-    """public area attribute"""
+    """public attribute area"""
     def area(self):
-        """Exeption error raised"""
+        """exception error raised"""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
-        """Value is an int and less 0r == zero"""
+        """value is integer ang greater than  0"""
         if type(value) is not int:
-            raise TypeError("{:s} must be an integer".formart(name))
+            raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{:s} must be greater than 0".formart(name))
+            raise ValueError("{:s} must be greater than 0".format(name))
