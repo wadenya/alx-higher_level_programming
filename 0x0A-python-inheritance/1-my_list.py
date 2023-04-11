@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-MyList contains all contents of list
+MyList class contains list class
 """
 
+
 class MyList(list):
-    """subclasses are down here"""
+    """subclass of list initializer"""
     def __init__(self):
-        """I can initialize an object"""
+        """initializes the object we have"""
         super().__init__()
 
     def print_sorted(self):
-        """I print list in a sorted assending order"""
+        """prints the sorted list in order"""
         print(sorted(self))
