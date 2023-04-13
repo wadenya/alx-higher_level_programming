@@ -12,12 +12,10 @@ filename = "add_item.json"
 try:
 	json_list = load_from_json_file(filename)
 except FileNotFoundError:
-	# Create an empty list if the file does not exist
-	json_list = []
+    json_list = []
 
-# Add new arguments to the list
 for arg in args_list:
-	json_list.append(arg)
+    json_list.append(arg)
 
 # Save the list to add_item.json
 save_to_json_file(json_list, filename)
