@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-for (const phrase = ["C is fun", "Python is cool", "JavaScript is amazing"]) {
-	console.log(phrase)
+for (const phrase of ["C is fun", "Python is cool", "JavaScript is amazing"]) {
+	console.log(phrase);
 }
