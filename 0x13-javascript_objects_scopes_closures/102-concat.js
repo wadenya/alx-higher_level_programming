@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const fls = require('fls');
+const fs = require('fs');
 
-const fArg = fls.readFileSync(process.argv[2]).toString();
-const sArg = fls.readFileSync(process.argv[3]).toString();
-fls.writeFileSync(process.argv[4], fArg + sArg);
+const fArg = fs.readFileSync(process.argv[2]).toString();
+const sArg = fs.readFileSync(process.argv[3]).toString();
+fs.writeFileSync(process.argv[4], fArg + sArg);
