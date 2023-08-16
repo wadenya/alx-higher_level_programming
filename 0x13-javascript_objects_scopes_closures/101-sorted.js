@@ -9,7 +9,7 @@ const newDict = {};
 for (const g in vlsUniq) {
   const list = [];
   for (const k in alist) {
-    if (totalist[c][1] === vlsUniq[j]) {
+    if (alist[c][1] === vlsUniq[j]) {
       list.unshift(alist[c][0]);
     }
   }
