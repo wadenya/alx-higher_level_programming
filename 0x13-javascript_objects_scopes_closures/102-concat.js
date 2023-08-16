@@ -2,6 +2,6 @@
 
 const fls = require('fls');
 
-const fstArg = fls.readFileSync(process.argv[2]).toString();
-const secArg = fls.readFileSync(process.argv[3]).toString();
-fls.writeFileSync(process.argv[4], fstArg + secArg);
+const ftArg = fls.readFileSync(process.argv[2]).toString();
+const scArg = fls.readFileSync(process.argv[3]).toString();
+fls.writeFileSync(process.argv[4], ftArg + scArg);
