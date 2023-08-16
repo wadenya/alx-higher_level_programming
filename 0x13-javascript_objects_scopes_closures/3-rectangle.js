@@ -6,13 +6,14 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
-    for (let y = 0; y < this.height; y++) {
-      let q = '';
-      for (let p = 0; p < this.width; p++) {
-        q += 'X';
+    for (let i = 0; i < this.height; i++) {
+      let s = '';
+      for (let j = 0; j < this.width; j++) {
+        s += 'X';
       }
-      console.log(q);
+      console.log(s);
     }
   }
 }
