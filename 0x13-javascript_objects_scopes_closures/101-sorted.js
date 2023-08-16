@@ -2,18 +2,17 @@
 
 const dict = require('./101-data').dict;
 
-const allist = Object.entries(dict);
-const value = Object.values(dict);
-const uncVal = [...new Set(value)];
-const nwDict = {};
-
-for (const h in uncVal) {
+const alist = Object.entries(dict);
+const vls = Object.values(dict);
+const vlsUniq = [...new Set(vls)];
+const newDict = {};
+for (const g in vlsUniq) {
   const list = [];
-  for (const c in allist) {
-    if (allist[c][1] === uncVal[h]) {
-      list.unshift(allist[c][0]);
+  for (const k in alist) {
+    if (totalist[c][1] === vlsUniq[j]) {
+      list.unshift(alist[c][0]);
     }
   }
-  nwDict[uncVal[h]] = list;
+  newDict[vlsUniq[g]] = list;
 }
-console.log(nwDict);
+console.log(newDict);
