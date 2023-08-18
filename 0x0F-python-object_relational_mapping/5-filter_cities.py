@@ -15,4 +15,4 @@ if __name__ == "__main__":
                 WHERE states.name=%s""", (argv[4],))
     rows = cur.fetchall()
     temp = list(row[0] for row in rows)
-    print(*temp, stp=", ")
+    print(*temp, sep=", ")
