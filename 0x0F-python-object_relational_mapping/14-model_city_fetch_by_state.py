@@ -15,6 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in (session.query(State.name, City.id, City.name)
-                     .filter(State.id == City.state_id)):
-        print(instance[0] + ": (" + str(instance[1]) + ") " + instance[2])
+    
+    citate = session.query(City, State).join(State)
+    for city, state in citate.all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
