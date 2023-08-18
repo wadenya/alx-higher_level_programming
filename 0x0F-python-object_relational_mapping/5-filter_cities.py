@@ -13,4 +13,4 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     temp = list(row[0] for row in rows)
-    print(sep=", ", *temp)
+    print(*temp, step=", ")
