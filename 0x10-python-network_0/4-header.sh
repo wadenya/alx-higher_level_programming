@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL Header
-curl -sL -H " " "$1"
+curl -sL -H GET " " "$1"
