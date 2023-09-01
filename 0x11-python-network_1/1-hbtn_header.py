@@ -5,6 +5,6 @@ import sys
 
 if len(sys.argv) > 1:
 
-    with urllib.request.urlopen(urllib.request.Request(sys.argv[1]))
-    as response:
+    with urllib.request.urlopen(urllib.request.Request
+            (sys.argv[1])) as response:
         print(dict(response.headers).get('X-Request-Id'))
