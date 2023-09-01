@@ -4,6 +4,5 @@ import urllib.request
 import sys
 
 if len(sys.argv) > 1:
-    with urllib.request.urlopen(sys.argv[1]) as response:
-        header = response.info()
-        print(header.get('X-Request-Id'))
+    with urllib.request.urlopen(urllib.request.Request(sys.argv[1])) as response:
+        print(dict(response.headers).get('X-Request-Id'))
