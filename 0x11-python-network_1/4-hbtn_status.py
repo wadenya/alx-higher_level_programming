@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""What's my status? #1"""
+"""Fetch https://alx-intranet.hbtn.io."""
 import requests
 
 if __name__ == "__main__":
