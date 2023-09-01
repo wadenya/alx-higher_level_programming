@@ -4,12 +4,12 @@ import urllib.request
 import urllib.parse
 import sys
 
-if len(sys.argv) == 3:
+if __name__ == "__main__":
 
-    #Data to send
-    data = urlib.parse.urlencode({'email': sys.argv[2]}).encode('utf-8')
+    url = sys.argv[1]
+    eml_val = sys.argv[2]
+    data = urllib.parse.urlencode({'email': eml_val}).encode('ascii')
 
-    #Send POST request
-    with urllib.request.urlopen(sys.argv[1], data=data) as response:
-        body = response.read()
-        print(body.decode('utf-8'))
+    request = urllib.request.Request(url, data)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode('utf-8'))
